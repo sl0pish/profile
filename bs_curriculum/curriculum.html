@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Bootstrap</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪷</text></svg>">
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #F2EAE0;
+    }
+
+    nav,
+    footer {
+      background-color: #e89c9c;
+      color: #602b2b;
+
+    }
+
+    .card-body {
+      background-color: #804444;
+      color: #ebb6b6;
+      border-radius: 5px;
+      border: #3d1a1a 1px solid;
+
+    }
+
+    .card-title, h2 {
+      color: #3d1a1a;
+    }
+
+    a {
+      color: #3d1a1a;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: #602b2b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+
+
+
+      <!-- Botão hamburguer -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="menu">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="portifolio.html">Portfólio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+
+
+          <!-- Notificações -->
+          <div class="dropdown">
+
+            <button class="btn btn-outline-light position-relative dropdown-toggle" data-bs-toggle="dropdown">
+              🔔
+
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                99+
+              </span>
+
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Mensagem 1</a></li>
+              <li><a class="dropdown-item" href="#">Mensagem 2</a></li>
+              <li><a class="dropdown-item" href="#">Mensagem 3</a></li>
+            </ul>
+
+          </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO -->
+  <div class="container mt-4">
+
+    <div class="row">
+
+      <!-- SIDEBAR -->
+      <div class="col-lg-3 col-md-4 mb-4">
+
+        <div class="card text-center" style="background-color: #804444;
+      color: #ebb6b6;
+      border-radius: 5px;
+      border: #3d1a1a 1px solid;">
+
+          <img src="eu.jpg" class="card-img-top  p-4" alt="Foto Perfil">
+
+          <div class="card-body" style="border: none;">
+
+            <h3 class="card-title">Mariana A. Américo</h3>
+
+            <p class="card-text">
+              17 anos <br>
+              No curso de desenvolvimento de sistemas
+            </p>
+
+            <p class="card-text">
+              <a href="https://sl0p.neocities.org/" target="_blank">Meu Site</a>
+            </p>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <div class="col-lg-9 col-md-8">
+
+        <!-- EXPERIÊNCIA -->
+        <div class="card mb-4">
+
+          <div class="card-body">
+
+            <h2 class="fs-3 mb-3">
+              Sobre Mim
+            </h2>
+
+            <p>
+              Meu nome é Mariana Augusto Américo, tenho 17 anos e atualmente estou no
+              terceiro ano do ensino médio. Faço curso de Desenvolvimento de Sistemas no Senai,
+              começando no ano de 2025. Faço Karatê estilo Shotokan, e nesse momento sou faixa verde. Gosto de filmes, música, jogos e cultura pop em geral, também gostando de ler
+              e tendo lido aproximadamente 90 livros em minha vida, contando livros, mangás e gibis.
+              Por apreciar cultura pop, aprendi inglês quando criança e sou fluente, falando formalmente ou
+              em gírias. Pretendo seguir carreira em História, e penso em fazer faculdade de Psicanálise algum dia, já
+              que tenho interesse, sou observadora, e acho que seria uma boa adição a compreender História.
+            </p>
+
+
+          </div>
+
+        </div>
+
+        <!-- HABILIDADES -->
+        <div class="card mb-4">
+
+          <div class="card-body">
+
+            <h2 class="fs-3 mb-3">
+              Habilidades
+            </h2>
+
+
+            <div class="accordion" id="ex1">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse1">Hard Skills</button>
+                </h2>
+
+                <div id="collapse1" data-bs-parent="#ex1" class="accordion collapse">
+                  <div class="accordion-item p-1">
+                    HTML
+                  </div>
+
+                  <div class="accordion-item p-1">
+                    CSS
+                  </div>
+
+                  <div class="accordion-item p-1">
+                    Fluência em Inglês
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion mt-3" id="ex1">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse2">Soft Skills</button>
+                </h2>
+
+                <div id="collapse2" data-bs-parent="#ex2" class="accordion collapse">
+                  <div class="accordion-item p-1">
+                    Comunicação
+                  </div>
+
+                  <div class="accordion-item p-1">
+                    Trabalho em equipe
+                  </div>
+
+                  <div class="accordion-item p-1">
+                    Criatividade
+                  </div>
+
+                  <div class="accordion-item p-1">
+                    Noção de Design
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+
+        </div>
+
+        <!-- FORMAÇÃO -->
+        <div class="card mb-4">
+
+          <div class="card-body">
+
+            <h2 class="fs-3 mb-3">
+              Formação Acadêmica
+            </h2>
+
+            <p>
+              Cursando Ensino Médio
+            </p>
+
+            <p>
+              Curso Técnico em Desenvolvimento de Sistemas
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class=" mt-5 p-4">
+
+    <div class="container">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+        <div>
+          <h4>Informações para Contato</h4>
+
+          <p class="mb-1">📧 sl0pspamaccount@email.com</p>
+          <p class="mb-1">📱 (14) 99183-3715</p>
+        </div>
+
+        <div class="mt-3 mt-md-0">
+          <p class="mb-0">
+            © 2026 - Currículo simples com Bootstrap
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+</body>
+
+</html>
