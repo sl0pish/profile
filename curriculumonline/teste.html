@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contato - Portfólio</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+
+   <div class="container my-5">
+       <div class="row justify-content-center">
+           <div class="col-md-6">
+               <div class="card shadow-sm">
+                   <div class="card-body p-4">
+                       <h3 class="card-title text-center mb-4">Proposta de Contratação</h3>
+                       <p class="text-muted text-center small mb-4">Preencha os dados abaixo para me enviar um e-mail direto.</p>
+                      
+                       <form id="formContato">
+                          
+                           <div class="mb-3">
+                               <label for="nome" class="form-label">Nome do Recrutador / Empresa</label>
+                               <input type="text" class="form-control" id="nome" placeholder="Ex: João da Silva (Empresa X)" required>
+                           </div>
+
+
+                           <div class="mb-3">
+                               <label for="vaga" class="form-label">Vaga / Assunto</label>
+                               <input type="text" class="form-control" id="vaga" placeholder="Ex: Desenvolvedor Front-End Júnior" required>
+                           </div>
+
+
+                           <div class="mb-3">
+                               <label for="mensagem" class="form-label">Proposta / Mensagem</label>
+                               <textarea class="form-control" id="mensagem" rows="4" placeholder="Olá, gostamos do seu portfólio..." required></textarea>
+                           </div>
+
+
+                           <button type="button" class="btn btn-primary w-100" onclick="enviarEmail()">Enviar Mensagem</button>
+                       </form>
+
+
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <script>
+       function enviarEmail() {
+   const nome = document.getElementById('nome').value;
+   const vaga = document.getElementById('vaga').value;
+   const mensagem = document.getElementById('mensagem').value;
+
+
+   if (!nome || !vaga || !mensagem) {
+       alert("Por favor, preencha todos os campos antes de enviar.");
+       return;
+   }
+
+
+   const emailDestino = "fabiotiprofessor@gmail.com";
+   const assunto = encodeURIComponent(`Proposta de Vaga: ${vaga}`);
+   const corpoEmail = encodeURIComponent(`Olá, meu nome é ${nome}.\n\nMensagem/Proposta:\n${mensagem}`);
+
+
+   const urlGmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailDestino}&su=${assunto}&body=${corpoEmail}`;
+
+
+
+
+   window.open(urlGmail, '_blank');
+}
+   </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
